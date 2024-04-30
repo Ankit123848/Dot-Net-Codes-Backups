@@ -1,0 +1,7 @@
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\bin\Debug\ref_out_var_params_demo.exe.config
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\bin\Debug\ref_out_var_params_demo.exe
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\bin\Debug\ref_out_var_params_demo.pdb
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\obj\Debug\ref_out_var_params_demo.csproj.AssemblyReference.cache
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\obj\Debug\ref_out_var_params_demo.csproj.CoreCompileInputs.cache
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\obj\Debug\ref_out_var_params_demo.exe
+C:\Users\aarora208\source\repos\ArraysDemo\ref_out_var_params_demo\obj\Debug\ref_out_var_params_demo.pdb

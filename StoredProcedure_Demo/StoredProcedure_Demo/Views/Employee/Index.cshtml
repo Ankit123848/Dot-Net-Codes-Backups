@@ -1,0 +1,92 @@
+﻿@* @model System.Data.DataTable
+
+<div class="row pt-2">
+    <div class="col-6 col-md-3">
+        <a asp-controller="Employee" asp-action="Create" class="btn btn-primary form-control">Create</a>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped border-1">
+    <thead>
+        <tr>
+            <th>EmployeeId</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (System.Data.DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["EmployeeId"]</td>
+                <td>@row["FirstName"]</td>
+                <td>@row["LastName"]</td>
+                <td>@row["Department"]</td>
+                <td>
+                    <!-- Edit button -->
+                    <a asp-controller="Employee" asp-action="Edit" asp-route-id="@row["EmployeeId"]" class="btn btn-primary">Edit</a>
+
+                    <!-- Delete button -->
+                    <a asp-controller="Employee" asp-action="Delete" asp-route-id="@row["EmployeeId"]" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table> *@
+
+
+@model System.Data.DataTable
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient m-lg-0 py-3">
+        <div class="row">
+            <div class="col-6">
+                <!-- Your table title, if needed -->
+                <h2 class="text-white py-2">Employee List</h2>
+            </div>
+            <div class="col-6 text-end">
+                <!-- Create button -->
+                <a asp-controller="Employee" asp-action="Create" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i> Create New Employee
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <table class="table table-bordered table-striped border-1">
+            <thead>
+                <tr>
+                    <th>EmployeeId</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (System.Data.DataRow row in Model.Rows)
+                {
+                    <tr>
+                        <td>@row["EmployeeId"]</td>
+                        <td>@row["FirstName"]</td>
+                        <td>@row["LastName"]</td>
+                        <td>@row["Department"]</td>
+                        <td>
+                            <!-- Edit button -->
+                            <a asp-controller="Employee" asp-action="Edit" asp-route-id="@row["EmployeeId"]" class="btn btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+
+                            <!-- Delete button -->
+                            <a asp-controller="Employee" asp-action="Delete" asp-route-id="@row["EmployeeId"]" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

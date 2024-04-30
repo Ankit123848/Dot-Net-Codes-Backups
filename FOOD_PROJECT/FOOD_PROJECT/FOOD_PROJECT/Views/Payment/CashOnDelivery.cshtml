@@ -1,0 +1,77 @@
+﻿@model FOOD_PROJECT.Models.Payment
+@{
+    ViewBag.Title = "CashOnDelivery";
+}
+
+<h2>CashOnDelivery</h2>
+@using (Html.BeginForm("ProcessCashOnDelivery", "Payment", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+
+    @*@Html.LabelFor(model => model.Amount, "Amount")
+        @Html.TextBoxFor(model => model.Amount, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Amount)*@
+    <div class="form-group">
+        <label for="Amount">Amount</label>
+        <input type="text" id="Amount" name="Amount" class="form-control" value="@ViewBag.TotalBill" readonly="readonly" />
+</div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FirstName, "FirstName")
+        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastName, "LastName")
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
+
+
+
+  
+    <div class="form-group">
+        @Html.LabelFor(model => model.AddressLine, "Delivery Address")
+        @Html.TextAreaFor(model => model.AddressLine, new { @class = "form-control", rows = 4 })
+        @Html.ValidationMessageFor(model => model.AddressLine)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, "City")
+        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.City)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.State, "State")
+        @Html.TextBoxFor(model => model.State, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.State)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, "PostalCode")
+        @Html.TextBoxFor(model => model.PostalCode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PostalCode)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country, "Country")
+        @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Country)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MobileNo, "MobileNo")
+        @Html.TextBoxFor(model => model.MobileNo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.MobileNo)
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit Cash on Delivery Payment </button>
+
+}
+

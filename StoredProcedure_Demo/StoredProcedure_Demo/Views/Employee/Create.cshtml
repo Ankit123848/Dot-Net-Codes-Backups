@@ -1,0 +1,27 @@
+﻿@model StoredProcedure_Demo.Models.Employee
+
+<h2>Create Employee</h2>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+    </div>
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+    </div>
+    <div>
+        <label asp-for="Department"></label>
+        <input asp-for="Department" />
+    </div>
+    <button type="submit">Create</button>
+</form>
+<div class="row pt-2">
+    <div class="col-6 col-md-3">
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-primary border form-control">
+            Back to List
+        </a>
+    </div>
+</div>
+
